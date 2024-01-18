@@ -1,0 +1,2 @@
+# CreatePalletApplication
+Palette generation application
