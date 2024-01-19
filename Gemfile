@@ -12,7 +12,7 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false                                     #Ускорялочка для ruby
 gem "sassc-rails"                                                  #Препроцессоры для css
 gem 'slim-rails'                                                   #Просто так удобнее и привычнее писать html
-gem 'sidekiq', '~>6.0.0'
+
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
@@ -21,4 +21,5 @@ end
 group :development do
   gem "pry" #Для человека понятной консоли
   gem "web-console"
+  gem "rspec"
 end

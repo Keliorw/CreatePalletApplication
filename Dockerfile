@@ -45,7 +45,4 @@ RUN yarn install --check-files
 
 COPY . ./
 
-# Проброс порта 3001
-EXPOSE 3001
-
 ENTRYPOINT ["./entrypoints/docker-entrypoint.sh"]
