@@ -66,14 +66,12 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
-    base64 (0.2.0)
     bindex (0.8.1)
     bootsnap (1.17.1)
       msgpack (~> 1.2)
     builder (3.2.4)
     coderay (1.1.3)
     concurrent-ruby (1.2.3)
-    connection_pool (2.4.1)
     crass (1.0.6)
     date (3.3.4)
     debug (1.9.1)
@@ -120,8 +118,6 @@ GEM
     nokogiri (1.15.5)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
-    nokogiri (1.15.5-x86_64-linux)
-      racc (~> 1.4)
     pg (1.5.4)
     pry (0.14.2)
       coderay (~> 1.1)
@@ -132,9 +128,6 @@ GEM
       nio4r (~> 2.0)
     racc (1.7.3)
     rack (2.2.8)
-    rack-protection (3.2.0)
-      base64 (>= 0.1.0)
-      rack (~> 2.2, >= 2.2.4)
     rack-test (2.1.0)
       rack (>= 1.3)
     rails (7.0.8)
@@ -168,7 +161,6 @@ GEM
     rake (13.1.0)
     rdoc (6.6.2)
       psych (>= 4.0.0)
-    redis (4.8.1)
     reline (0.4.2)
       io-console (~> 0.5)
     rspec (3.12.0)
@@ -192,11 +184,6 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    sidekiq (6.0.7)
-      connection_pool (>= 2.2.2)
-      rack (~> 2.0)
-      rack-protection (>= 2.0.0)
-      redis (>= 4.1.0)
     slim (5.2.0)
       temple (~> 0.10.0)
       tilt (>= 2.1.0)
@@ -234,7 +221,6 @@ GEM
 
 PLATFORMS
   ruby
-  x86_64-linux
 
 DEPENDENCIES
   bootsnap
@@ -244,11 +230,8 @@ DEPENDENCIES
   pry
   puma (~> 6.0.2)
   rails (~> 7.0.4, >= 7.0.4.2)
-  redis (~> 4)
-  reline (~> 0.4.2)
   rspec
   sassc-rails
-  sidekiq (~> 6.0.0)
   slim-rails
   sprockets-rails
   turbo-rails
@@ -259,4 +242,4 @@ RUBY VERSION
    ruby 2.7.5p203
 
 BUNDLED WITH
-   2.4.10
+   2.1.4
