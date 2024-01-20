@@ -1,0 +1,59 @@
+main.wrapper
+  .container
+    section#homepage_hero
+      .homepage_hero_text
+        h1.homepage_hero_text_title
+          = 'The super fast'
+          br
+          = 'color palettes'
+          br
+          = 'generator!'
+        p
+          = 'Create the perfect palette or get inspired by'
+          br
+          = 'thousands of beautiful color schemes.'
+        .homepage_hero_text_btns
+          = link_to generate_pallets_path, class: 'btn btn--primary btn-m'
+            = t('header_items.start_generation')
+          = link_to trending_pallets_path, class: 'btn btn--secondary btn-m'
+            = t('header_items.show_trending')
+      .homepage_hero_image
+        =svg('hero_section_image')
+    section#homepage_testimonials
+      .testimonials_title
+        = 'Used by 5+ million designers and by top companies'
+      ul
+        li
+          a href='https://disney.com' target='_blank'
+            =svg('company_icons/disney')
+        li
+          a href='https://dreamworks.com/' target='_blank'
+            =svg('company_icons/dreamworks')
+        li
+          a href='https://www.warnerbros.com/' target='_blank'
+            =svg('company_icons/warnerbros')
+        li
+          a href='https://www.netflix.com/' target='_blank'
+            =svg('company_icons/netflix')
+        li
+          a href='https://ru.airbnb.com/' target='_blank'
+            =svg('company_icons/airbnb')
+        li
+          a href='https://www.dropbox.com/' target='_blank'
+            =svg('company_icons/dropbox')
+        li
+          a href='https://hasbro.com/' target='_blank'
+            =svg('company_icons/hasbro')
+        li
+          a href='https://www.ubisoft.com/' target='_blank'
+            =svg('company_icons/ubisoft')
+        li
+          a href='https://ea.com/' target='_blank'
+            =svg('company_icons/ea')
+        li
+          a href='https://apple.com/' target='_blank'
+            =svg('company_icons/apple')
+        li
+          a href='https://microsoft.com/' target='_blank'
+            =svg('company_icons/microsoft')
+

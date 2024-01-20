@@ -31,13 +31,18 @@ RUN apk add --update --no-cache \
 # Установка Bundler
 RUN gem install bundler -v $BUNDLER_VERSION
 
+ENV BUNDLE_PATH /bundle
+ENV BUNDLE_BIN /bundle/bin
+ENV GEM_HOME /bundle
+ENV PATH $GEM_HOME/bin:$BUNDLE_BIN:$PATH
+
 WORKDIR /app
 
 COPY Gemfile Gemfile.lock ./
 
 RUN bundle config build.nokogiri --use-system-libraries
 
-RUN bundle check || bundle install
+RUN apk update && bundle check || bundle install
 
 COPY package.json yarn.lock ./
 

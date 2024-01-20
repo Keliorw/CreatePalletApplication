@@ -1,0 +1,16 @@
+header#header
+  =link_to root_path, class: 'header_logo'
+    =svg('logo')
+  nav.nav_container
+    ul.nav_block
+      li.nav_item
+        .link.header_tools-btn
+          = t('header_items.tools')
+      li.nav_item
+        span.divider
+      li.nav_item
+        .link.header_signin-btn
+          = t('header_items.sign_in')
+      li.nav_item
+        .btn.btn--primary.btn-s.header_signup-btn
+          = t('header_items.sign_up')

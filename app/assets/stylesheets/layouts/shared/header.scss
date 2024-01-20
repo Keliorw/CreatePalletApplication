@@ -1,0 +1,42 @@
+#header {
+  box-shadow: rgba(0, 0, 0, 0.075) 0 1px;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .header_logo {
+    height: inherit;
+    display: inherit;
+    align-items: center;
+    margin-left: 24px;
+  }
+  .nav_container {
+    height: inherit;
+    margin-right: 14px;
+    .nav_block {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      gap: 10px;
+      height: inherit;
+      .nav_item {
+        height: inherit;
+        display: inherit;
+        align-items: center;
+        .divider {
+          height: 60%;
+          width: 1px;
+          margin: 0 10px;
+          background: rgba(0, 0, 0, 0.075);
+        }
+        .header_signin-btn {
+          cursor: pointer;
+        }
+        .header_tools-btn {
+          cursor: default;
+        }
+      }
+    }
+  }
+}

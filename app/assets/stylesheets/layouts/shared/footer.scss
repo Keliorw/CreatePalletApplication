@@ -1,0 +1,28 @@
+#footer {
+  height: 110px;
+  background: $footer_background;
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    #footer_credits {
+      span {
+        color: #111111;
+        font-weight: 500;
+        font-size: 1.1em;
+        &:hover {
+          color: $default_blue_color;
+        }
+      }
+    }
+    .nav_container {
+      .nav_block {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+      }
+    }
+  }
+}
