@@ -14,7 +14,7 @@ gem 'devise', '~> 4.9'                                             #Для ау�
 
 group :development do
   gem "pry"                                                        #Для человека понятной консоли
-  gem "debug", platforms: %i[ mri mingw x64_mingw ]
-  gem "web-console"
-  gem "rspec"
+  gem "debug", platforms: %i[ mri mingw x64_mingw ]                #Для вывода ошибок
+  gem "web-console"                                                #Добавляет консоль в браузер
+  gem "rspec"                                                      #Для тестов приложения
 end
