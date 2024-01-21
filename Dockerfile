@@ -1,7 +1,7 @@
 # /path/to/app/Dockerfile
 FROM ruby:2.7.5-alpine
 
-ENV BUNDLER_VERSION=2.0.2
+ENV BUNDLER_VERSION=2.1.4
 
 RUN apk add --update --no-cache \
       binutils-gold \
@@ -52,6 +52,6 @@ RUN yarn global add esbuild
 
 COPY . ./
 
-EXPOSE 80
+EXPOSE 3000
 
 ENTRYPOINT ["./entrypoints/docker-entrypoint.sh"]

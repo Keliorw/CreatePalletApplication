@@ -8,6 +8,10 @@ export default class extends Controller {
     console.log("React controller connected");
     const container = document.getElementById('app');
     const root = createRoot(container);
-    root.render(<App tab="home" />);
+    root.render(
+        <React.StrictMode>
+          <App tab="home" />
+        </React.StrictMode>
+    );
   }
 }
