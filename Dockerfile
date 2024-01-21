@@ -48,6 +48,10 @@ COPY package.json yarn.lock ./
 
 RUN yarn install --check-files
 
+RUN yarn global add esbuild
+
 COPY . ./
+
+EXPOSE 80
 
 ENTRYPOINT ["./entrypoints/docker-entrypoint.sh"]
