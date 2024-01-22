@@ -49,6 +49,7 @@ COPY package.json yarn.lock ./
 RUN yarn install --check-files
 
 RUN yarn global add esbuild
+RUN yarn global add react-devtools
 
 COPY . ./
 

@@ -13,7 +13,6 @@ gem 'slim-rails'                                                   #Просто
 gem 'devise'                                                       #Для аунтефикацию пользователей
 gem 'jsbundling-rails', '~> 1.2'
 gem 'stimulus-rails', '~> 1.3'
-gem 'foreman'
 
 group :development do
   gem 'pry'                                                        #Для человека понятной консоли

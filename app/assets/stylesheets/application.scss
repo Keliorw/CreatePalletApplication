@@ -2,7 +2,9 @@
 @import 'layouts/social_icons';
 @import 'layouts/shared/header';
 @import 'layouts/shared/footer';
-@import 'application/index';
+@import 'react_tostify';
+@import 'page/index';
+@import 'user/generate';
 
 html {
   font-family: $base_font_family;
@@ -42,6 +44,7 @@ html {
 .btn--secondary {
   box-shadow: inset #d8d8da 0 0 0 1px;
   background: #ffffff;
+  color: #111111;
   &:hover {
     box-shadow: inset #b1b0b5 0 0 0 1px;
   }
@@ -53,6 +56,26 @@ html {
   transition: box-shadow .1s,color .1s,background .1s;
   font-weight: 600;
   text-decoration: none;
+}
+
+.btn--transparent {
+  color: #111111;
+  background: #ffffff;
+  &:hover {
+    background: #f2f2f3;
+  }
+}
+
+.btn--with-icon {
+  display: flex;
+  flex-direction: row;
+  i:first-child {
+    margin-right: 10px;
+  }
+  span {
+    flex-grow: 1;
+    font-size: 100%;
+  }
 }
 
 .btn-s {
@@ -80,4 +103,34 @@ html {
   width: auto;
   padding: 0 42px;
   margin: 0 auto;
+}
+
+.modal {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+  &__active {
+    opacity: 1;
+    pointer-events: all;
+  }
+  &_content {
+    border-radius: 12px;
+    background-color: #ffffff;
+    padding: 20px;
+    transform: scale(0.5);
+    transition: 0.4s all;
+    &__active {
+      transform: scale(1);
+    }
+  }
 }

@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :users
   root "page#index"
-  get "pallets/trending", to: "pallet#trending", as: "trending_pallets"
-  get "generate", to: "user#generate", as: "generate_pallets"
+
+  #user
+  devise_for :users
+
+  #pallet
+  get "/generate", to: "pallet#generate", as: "generate_pallets"
+  get "/pallets/trending", to: "pallet#trending", as: "trending_pallets"
 end

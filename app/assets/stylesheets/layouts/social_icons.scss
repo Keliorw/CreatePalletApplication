@@ -62,3 +62,68 @@
   }
 }
 
+.icon-favorite-18px {
+  display: flex;
+  align-items: center;
+  &:before {
+    width: 18px;
+    height: 18px;
+    display: block;
+    background: url('assets/button_icons/heart_icon.svg');
+    background-size: cover;
+    content: "";
+  }
+}
+
+.icon-black-cross-18px {
+  display: flex;
+  align-items: center;
+  &:before {
+    width: 18px;
+    height: 18px;
+    display: block;
+    background: url('assets/button_icons/black/cross_icon.svg');
+    background-size: cover;
+    content: "";
+  }
+}
+
+.icon-white-cross-18px {
+  display: flex;
+  align-items: center;
+  &:before {
+    width: 18px;
+    height: 18px;
+    display: block;
+    background: url('assets/button_icons/white/cross_icon.svg');
+    background-size: cover;
+    content: "";
+  }
+}
+
+.icon-black-copy-18px {
+  display: flex;
+  align-items: center;
+  &:before {
+    width: 18px;
+    height: 18px;
+    display: block;
+    background: url('assets/button_icons/black/copy_icon.svg');
+    background-size: cover;
+    content: "";
+  }
+}
+
+.icon-white-copy-18px {
+  display: flex;
+  align-items: center;
+  &:before {
+    width: 18px;
+    height: 18px;
+    display: block;
+    background: url('assets/button_icons/white/copy_icon.svg');
+    background-size: cover;
+    content: "";
+  }
+}
+

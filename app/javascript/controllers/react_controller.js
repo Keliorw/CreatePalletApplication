@@ -1,17 +1,26 @@
 import { Controller } from "@hotwired/stimulus"
 import React from "react";
 import { createRoot } from 'react-dom/client';
-import App from "../components/App";
+import HomePage from "../components/pages/HomePage";
+import GeneratePallets from "../components/pages/GeneratePallets";
 
 export default class extends Controller {
   connect() {
-    console.log("React controller connected");
-    const container = document.getElementById('app');
+    const container = document.getElementById('application');
+    const getContentPage = () => {
+      switch (window.location.pathname) {
+        case '/':
+          return <HomePage />
+        case '/generate':
+          return <GeneratePallets />
+        case '/pallets/trending':
+          return ''
+        default:
+          return ''
+      }
+    }
+
     const root = createRoot(container);
-    root.render(
-        <React.StrictMode>
-          <App tab="home" />
-        </React.StrictMode>
-    );
+    root.render(getContentPage());
   }
 }
