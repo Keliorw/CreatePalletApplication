@@ -30,10 +30,10 @@ const Header = () => {
                         <span className='divider'></span>
                     </li>
                     <li className='nav_item'>
-                        <div className='link header_signin-btn' onClick={() => openModalWithContent(<SignInModal />)}>Sign In</div>
+                        <div className='link header_signin-btn' onClick={() => openModalWithContent(<SignInModal sign_up_modal={openModalWithContent} />)}>Sign In</div>
                     </li>
                     <li className='nav_item'>
-                        <div className='btn btn--primary btn-s header_signup-btn' onClick={() => openModalWithContent(<SignUpModal />)}>Sign Up</div>
+                        <div className='btn btn--primary btn-s header_signup-btn' onClick={() => openModalWithContent(<SignUpModal sign_in_modal={openModalWithContent} />)}>Sign Up</div>
                     </li>
                 </ul>
             </nav>

@@ -30,6 +30,18 @@ html {
   &:hover {
     color: $default_blue_color;
   }
+  &--primary {
+    color: $default_blue_color;
+    &:hover {
+      color: $hover_blue_color;
+    }
+  }
+  &--hover-underline {
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .btn--primary {
@@ -64,6 +76,10 @@ html {
   &:hover {
     background: #f2f2f3;
   }
+}
+
+.btn-icon {
+  display: flex;
 }
 
 .btn--with-icon {
@@ -126,11 +142,42 @@ html {
   &_content {
     border-radius: 12px;
     background-color: #ffffff;
-    padding: 20px;
     transform: scale(0.5);
     transition: 0.4s all;
     &__active {
       transform: scale(1);
+    }
+    .modal_title{
+      padding: 32px 24px 24px;
+      text-align: center;
+      h2 {
+        font-weight: 900;
+        margin-bottom: 10px;
+        font-size: 35px;
+      }
+      div {
+        color: $light_gray_color;
+        line-height: 1.4em;
+        font-size: 16px;
+      }
+    }
+  }
+  &_close {
+    position: absolute;
+    top: 8px;
+    left: 8px
+  }
+  &_footer {
+    box-shadow: rgba(0, 0, 0, 0.075) 0 -1px;
+    padding: 16px;
+    text-align: center;
+    line-height: 1.7em;
+    font-size: 14px;
+    &_item {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
     }
   }
 }

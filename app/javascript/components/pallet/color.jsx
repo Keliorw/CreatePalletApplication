@@ -24,8 +24,8 @@ export default function Color(props) {
   };
   const removeButton = () => {
     return props.color.visible_button ? (<div className='generator_color_remove-btn' onClick={() => props.destroy_function(props.color.id)}>
-                                    <i className={props.color.luminance <= 0.5 ? 'icon icon-white-cross-18px' : 'icon icon-black-cross-18px'}></i>
-                                  </div>) : ''
+                                           <i className={props.color.luminance <= 0.5 ? 'icon icon-white-cross-18px' : 'icon icon-black-cross-18px'}></i>
+                                         </div>) : ''
   };
 
   return (<div className='generator_color'>
