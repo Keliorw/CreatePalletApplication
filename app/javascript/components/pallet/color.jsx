@@ -10,7 +10,7 @@ export default function Color(props) {
   };
 
   return (<div className='generator_color'>
-    <div className='generator_color_background' style={{background: props.color.color}}></div>
+    <div className='generator_color_background' style={{boxShadow: `0px 0px 0px 1px ${props.color.color}`, background: props.color.color}}></div>
     <div className={props.color.luminance <= 0.5 ? 'generator_color_content is_white' : 'generator_color_content'}>
               <div className='generator_color_hex'>{props.color.hex_color}</div>
               <div className='generator_color_bar-left'></div>
