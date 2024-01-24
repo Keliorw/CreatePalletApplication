@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import GeneratorColor from "../../generator_color";
-import { ToastContainer } from 'react-toastify';
+import {toast, ToastContainer} from 'react-toastify';
 import axios from "axios";
 
 const Index = () => {
@@ -17,6 +17,11 @@ const Index = () => {
     };
     axios.post('/pallets/save_pallet', data)
          .catch(error => console.error(error))
+    toast.success('Palette saved successfully', {
+      position: "bottom-center",
+      pauseOnHover: false,
+      theme: 'dark'
+    });
   }
 
   return (<div id='generator'>

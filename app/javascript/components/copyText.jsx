@@ -10,7 +10,7 @@ export default function copyText(textToCopy) {
   document.execCommand('copy');
   // Удаляем временный textarea
   document.body.removeChild(textarea);
-  toast.success('Текст скопирован успешно!', {
+  toast.success('Color copied successfully!', {
     position: "bottom-center",
     pauseOnHover: false,
     theme: 'dark'
