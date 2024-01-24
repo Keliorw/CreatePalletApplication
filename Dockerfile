@@ -2,7 +2,6 @@
 FROM ruby:2.7.5-alpine
 
 ENV BUNDLER_VERSION=2.1.4
-    RUBY_VERSION=2.7.5
 
 RUN apk add --update --no-cache \
       binutils-gold \

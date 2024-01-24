@@ -10,9 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_01_20_165301) do
+ActiveRecord::Schema[7.0].define(version: 2024_01_24_081757) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "colors", force: :cascade do |t|
+    t.bigint "pallets_id"
+    t.string "value"
+    t.string "name", default: ""
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["pallets_id"], name: "index_colors_on_pallets_id"
+  end
+
+  create_table "likes", force: :cascade do |t|
+    t.bigint "pallets_id"
+    t.bigint "users_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["pallets_id"], name: "index_likes_on_pallets_id"
+    t.index ["users_id"], name: "index_likes_on_users_id"
+  end
+
+  create_table "pallets", force: :cascade do |t|
+    t.string "name", default: "My new pallet"
+    t.string "pallet", default: "[]"
+    t.bigint "users_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["users_id"], name: "index_pallets_on_users_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
