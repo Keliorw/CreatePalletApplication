@@ -52,7 +52,7 @@
   padding: 8px;
   z-index: 999;
   background: #ffffff;
-  .user_modal_items {
+  &_items {
     .user_modal_item {
       display: flex;
       align-items: center;
@@ -61,6 +61,8 @@
       white-space: nowrap;
       height: 34px;
       border-radius: 6px;
+      text-decoration: none;
+      color: #111111;
       &:hover {
         background: #ededee;
       }
