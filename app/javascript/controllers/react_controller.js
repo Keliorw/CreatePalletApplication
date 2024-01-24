@@ -5,6 +5,8 @@ import HomePage from "../components/pages/HomePage";
 import GeneratePallets from "../components/pages/GeneratePallets";
 import SignInPage from "../components/pages/SignInPage";
 import SignUpPage from "../components/pages/SignUpPage";
+import UserPallets from "../components/pallet/UserPallets";
+import TrendPallets from "../components/pallet/TrendPallets";
 
 export default class extends Controller {
   connect() {
@@ -19,10 +21,12 @@ export default class extends Controller {
           return <SignInPage />
         case '/users/sign_up':
           return <SignUpPage />
+        case '/user_pallets':
+          return <UserPallets />
         case '/pallets/trending':
-          return ''
+          return <TrendPallets />
         default:
-          return ''
+          return <HomePage />
       }
     }
 

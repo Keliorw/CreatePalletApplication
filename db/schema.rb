@@ -24,21 +24,21 @@ ActiveRecord::Schema[7.0].define(version: 2024_01_24_081757) do
   end
 
   create_table "likes", force: :cascade do |t|
-    t.bigint "pallets_id"
-    t.bigint "users_id"
+    t.bigint "pallet_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["pallets_id"], name: "index_likes_on_pallets_id"
-    t.index ["users_id"], name: "index_likes_on_users_id"
+    t.index ["pallet_id"], name: "index_likes_on_pallet_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
   create_table "pallets", force: :cascade do |t|
     t.string "name", default: "My new pallet"
     t.string "pallet", default: "[]"
-    t.bigint "users_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["users_id"], name: "index_pallets_on_users_id"
+    t.index ["user_id"], name: "index_pallets_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

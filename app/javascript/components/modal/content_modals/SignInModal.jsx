@@ -1,40 +1,7 @@
-import React, {useEffect, useState} from "react";
-import SignUpModal from "./SignUpModal";
+import React from "react";
 
-export default function SignInModal(props) {
-  const [userName, setUserName] = useState('')
-  const [userPassword, setUserPassword] = useState('')
-
+export default function SignInModal() {
   const csrf = document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-  const handleInputChangeName = (event) => {
-    setUserName(event.target.value);
-  };
-
-  const handleInputChangePassword = (event) => {
-    setUserPassword(event.target.value);
-  };
-
-  const sendFormSignIn = () => {
-      fetch('/users/sign_in', {
-        method: "POST",
-        headers: {
-          'X-CSRF-Token': csrf
-        },
-        data: {
-          authenticity_token: csrf,
-          user: {
-            name: userName,
-            password: userPassword
-          }
-        }
-      }).then((response) => {
-        console.log(JSON.stringify(response))
-      })
-        .then((data) => {
-          console.log(data)
-        })
-        .catch((error) => console.error(error))
-  }
 
   return (<>
     <div className='modal_title'>
@@ -47,8 +14,6 @@ export default function SignInModal(props) {
         <div className='input-group'>
           <input
             type='text'
-            value={userName}
-            onChange={handleInputChangeName}
             className='input input--m'
             name='user[email]'
             placeholder='Email'
@@ -57,8 +22,6 @@ export default function SignInModal(props) {
         <div className='input-group'>
           <input
             type='password'
-            value={userPassword}
-            onChange={handleInputChangePassword}
             className='input input--m'
             name='user[password]'
             placeholder='Password'

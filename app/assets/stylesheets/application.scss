@@ -5,6 +5,7 @@
 @import 'react_tostify';
 @import 'page/index';
 @import 'user/generate';
+@import 'pallets/pallet';
 
 html {
   font-family: $base_font_family;
@@ -28,6 +29,7 @@ html {
   transition: color 0.3s;
   font-size: 100%;
   text-decoration: none;
+  cursor: pointer;
   &:hover {
     color: $default_blue_color;
   }

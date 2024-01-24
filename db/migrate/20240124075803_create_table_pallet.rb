@@ -3,7 +3,7 @@ class CreateTablePallet < ActiveRecord::Migration[7.0]
     create_table :pallets do |t|
       t.string :name, default: 'My new pallet'
       t.string :pallet, default: '[]'
-      t.references :users
+      t.references :user
       t.timestamps
     end
   end

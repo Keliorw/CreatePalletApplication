@@ -39,8 +39,10 @@ const Header = () => {
                            {currentUser.email[0].toUpperCase()}
                            <div className={"user_modal"}>
                              <ul className={"user_modal_items"}>
-                               <li className={"user_modal_item"}>
-                                 Dashboard
+                               <li>
+                                 <a href={'/user_pallets'} className={'user_modal_item'}>
+                                   Dashboard
+                                 </a>
                                </li>
                                <li className={"divider"}></li>
                                <li className={"user_modal_item"} onClick={() => logoutCurrentUser()}>
